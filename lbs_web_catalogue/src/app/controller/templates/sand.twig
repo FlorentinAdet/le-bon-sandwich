@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block head %}
+    {% block title %}
+        Sandwich
+    {% endblock %}
+{% endblock %}
+
+{% block content %}
+    <h1>Liste des catégories</h1>
+    {% for sandwiche in sandwiches %}
+        <p><strong> {{sandwiche.libelle}} :</strong> </p>
+        <p>prix : {{sandwiche.description}} € </p>
+        <p>description : {{sandwiche.description}} </p>
+    {% endfor %}
+{% endblock %}
